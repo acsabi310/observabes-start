@@ -29,6 +29,7 @@ export class UserComponent implements OnInit {
 	}
 
 	onActivate() {
+		// userActivated: Subject ami observer is -> adatot küld
 		this.usersService.userActivated.next(this.id);
 	}
 }

@@ -16,6 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
 	constructor(private usersService: UsersService) {}
 
 	ngOnInit() {
+		// userActivated observable is, fel lehet iratkozni rá
 		this.userActSubscription = this.usersService.userActivated.subscribe(
 			(id: number) => {
 				if (id === 1) {
